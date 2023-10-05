@@ -1,0 +1,129 @@
+:root {
+  --blue: #54adec;
+  --blue-hover: #62bdfc;
+  --dark-grey: rgb(36, 36, 36);
+  --half-grey: rgba(0, 0, 0, 0.5);
+  --light-grey: rgb(209, 209, 209);
+  --bg-grey: rgb(235, 238, 241);
+  --red: #d14031;
+  --section-padding: 80px 0;
+}
+header {
+  position: absolute;
+  background-color: transparent;
+}
+.landing-section {
+  height: 100vh;
+  background-image: url(../imgs/open-textbook.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 -50px;
+  position: relative;
+}
+.landing-section .landing-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.landing-section h2 {
+  width: 60%;
+  color: white;
+  font-size: 48px;
+  line-height: 1.4;
+}
+.landing-section button {
+  margin-top: 30px;
+  padding: 10px 30px;
+  background-color: var(--blue);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+.landing-section button:hover {
+  background-color: var(--blue-hover);
+}
+.books {
+  /* background-color: var(--bg-grey); */
+}
+.books .heading {
+  margin-bottom: -30px;
+  padding-top: 30px;
+}
+.books .heading h2 {
+  width: fit-content;
+  margin: auto;
+  padding: 10px;
+  border: 2px solid rgb(26, 26, 26);
+  color: rgb(26, 26, 26);
+  text-align: center;
+}
+.books .books-container {
+  width: fit-content;
+  margin: auto;
+  padding: 80px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 270px);
+  gap: 40px;
+}
+.book-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #fafafa;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid var(--bg-grey);
+}
+.book-container:hover {
+  transform: scale(1.015);
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.12);
+}
+.book-container:hover img {
+  transform: scale(1.015);
+  /* box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.12); */
+}
+.book-container .img-container {
+  margin-bottom: 10px;
+}
+.book-container img {
+  width: 150px;
+  height: 200px;
+}
+/* .book-container img:hover {
+  transform: scale(1.02);
+} */
+.book-container .book-info {
+  height: 100%;
+}
+.book-container .book-info h5 {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  color: var(--half-grey);
+}
+.book-container .details-btn {
+  padding: 5px 5px;
+  border: 1px solid var(--dark-grey);
+  background-color: white;
+  font-size: 12px;
+}
+.book-container .details-btn a {
+  color: rgb(34, 34, 34);
+}
+.book-container .cart-btn {
+  margin-right: 5px;
+  padding: 5px 30px;
+  background-color: var(--dark-grey);
+  color: white;
+  font-size: 14px;
+}
+.book-container .cart-btn a {
+  color: white;
+}
+.no-results {
+  margin-bottom: -60px;
+  padding: 40px 0;
+  display: none;
+  font-size: 24px;
+}

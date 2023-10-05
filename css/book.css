@@ -1,0 +1,82 @@
+:root {
+  --blue: #54adec;
+  --blue-hover: #62bdfc;
+  --dark-grey: rgb(49, 49, 49);
+  --half-grey: rgba(0, 0, 0, 0.5);
+  --light-grey: rgb(209, 209, 209);
+
+  --section-padding: 80px 0;
+}
+.book-item {
+  padding: 50px 0;
+}
+.book-item .container {
+  display: flex;
+}
+.book-item .img-container {
+  margin-right: 50px;
+  min-width: 180px;
+  height: 250px;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+.book-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.book-info .book-title {
+  color: var(--dark-grey);
+}
+.book-info .authors {
+  margin: 10px 0 20px;
+  color: var(--half-grey);
+  font-weight: 400;
+}
+.book-info .Publisher,
+.Published-date {
+  color: var(--half-grey);
+  font-size: 14px;
+}
+.book-info .Published-date {
+  margin: 10px 0 30px;
+}
+.Publisher span,
+.Published-date span {
+  font-weight: 600;
+}
+.cart-btn {
+  width: 300px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: var(--dark-grey);
+  color: white;
+  font-size: 16px;
+}
+.cart-btn a {
+  color: white;
+}
+.description .container {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+.description .container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 0;
+  left: 0;
+  background-color: var(--light-grey);
+}
+.description h3 {
+  margin-bottom: 20px;
+  color: var(--dark-grey);
+  font-size: 24px;
+}
+.description p {
+  line-height: 1.5;
+}
