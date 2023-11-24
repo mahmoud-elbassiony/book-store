@@ -12,7 +12,7 @@ if (localStorage.localCart) {
 let isItemInCart = false;
 let isSearch = false;
 
-let header = document.querySelector("header");
+let header = document.querySelector(".navbar");
 let sticky = header.offsetTop;
 onscroll = function () {
   if (window.scrollY > sticky) {
@@ -90,8 +90,6 @@ function createBooks() {
     let bookTitle = document.createElement("h4");
     let bookAuthors = document.createElement("h5");
     let actions = document.createElement("div");
-    let detailsBtn = document.createElement("button");
-    let cartBtn = document.createElement("button");
 
     bookImg.src =
       booksArr[i].volumeInfo.imageLinks?.thumbnail ?? "./imgs/book.jpg";
@@ -99,21 +97,21 @@ function createBooks() {
     bookTitle.textContent = booksArr[i].volumeInfo.title ?? "Unknown";
     bookAuthors.textContent = booksArr[i].volumeInfo.authors?.join(", ") || "";
 
-    detailsBtn.innerHTML = `<a href="./book.html?=${booksArr[i].id}">View Details</a>`;
-    cartBtn.innerHTML = `<a href="javascript:void(0)" onclick=cartFun(${i})>Add to cart</a>`;
+    actions.innerHTML = `
+    <button class="cart-btn" onclick=cartFun(${i})>Add to cart</button>
+    <a href="./book.html?=${booksArr[i].id}" class="details-btn">View Details</a>
+    `;
 
     imageContainer.classList.add("img-container");
     book.classList.add("book-container");
     bookInfo.classList.add("book-info");
-    detailsBtn.classList.add("details-btn");
-    cartBtn.classList.add("cart-btn");
+    actions.classList.add("actions");
 
     booksContainer.appendChild(book);
     book.appendChild(imageContainer).appendChild(bookImg);
     book.appendChild(bookInfo).appendChild(bookTitle);
     bookInfo.appendChild(bookAuthors);
-    book.appendChild(actions).appendChild(cartBtn);
-    actions.appendChild(detailsBtn);
+    book.appendChild(actions);
   }
 }
 

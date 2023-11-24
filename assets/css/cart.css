@@ -1,21 +1,57 @@
-:root {
-  --blue: #54adec;
-  --blue-hover: #62bdfc;
-  --dark-grey: rgb(36, 36, 36);
-  --half-grey: rgba(0, 0, 0, 0.5);
-  --light-grey: rgb(209, 209, 209);
-  --bg-grey: rgb(235, 238, 241);
-  --red: #d14031;
-  --section-padding: 80px 0;
-}
+/* cart items section */
 .cart-items {
   padding: 60px 0;
   height: 100%;
 }
 .cart-items .container {
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
   border-radius: 10px;
   background-color: var(--bg-grey);
+}
+.cart-items .cart-item {
+  display: flex;
+  gap: 30px;
+}
+.cart-items .cart-item:not(:last-child) {
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--light-grey);
+}
+.cart-item h4 {
+  margin: 5px 0 20px;
+  color: var(--dark-grey);
+}
+.cart-item .actions {
+  display: flex;
+  gap: 8px;
+}
+.cart-item .actions button {
+  width: 25px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  font-size: 18px;
+  background-color: var(--half-grey);
+  color: white;
+}
+.cart-item .actions button:disabled {
+  background-color: var(--light-grey);
+  cursor: auto;
+}
+.cart-item .remove-btn {
+  margin-top: 20px;
+  border: 2px solid var(--red);
+  border-radius: 5px;
+  padding: 5px;
+  color: var(--red);
+}
+.cart-item .remove-btn:hover {
+  background-color: var(--red);
+  color: white;
 }
 .cart-items .empty-cart {
   padding: 12px;
@@ -36,40 +72,14 @@
 .cart-items .empty-cart button a {
   color: white;
 }
-.cart-items .cart-item {
-  padding: 20px;
-  display: flex;
-}
-.cart-items .cart-item:not(:last-child) {
-  border-bottom: 1px solid var(--light-grey);
-}
-.cart-item .img-container {
-  margin-right: 30px;
-}
-.cart-item h4 {
-  margin: 8px 0 20px;
-  color: var(--dark-grey);
-}
-.cart-item .actions button {
-  width: 25px;
-  height: 20px;
-  border-radius: 3px;
-  font-size: 18px;
-  background-color: var(--half-grey);
-  color: white;
-}
-.cart-item .actions button:disabled {
-  background-color: var(--light-grey);
-  cursor: auto;
-}
-.cart-item .remove-btn {
-  margin-top: 30px;
-  border: 2px solid var(--red);
-  border-radius: 5px;
-  padding: 5px;
-  color: var(--red);
-}
-.cart-item .remove-btn:hover {
-  background-color: var(--red);
-  color: white;
+@media (max-width: 576px) {
+  .cart-item {
+    flex-direction: column-reverse;
+  }
+  .cart-item {
+    text-align: center;
+  }
+  .cart-item .actions {
+    justify-content: center;
+  }
 }

@@ -4,31 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>book page</title>
+    <!-- Font Awesome Library -->
     <link rel="stylesheet" href="assets/css/all.min.css" />
+    <!-- Main CSS File -->
     <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- Page CSS File -->
     <link rel="stylesheet" href="assets/css/book.css" />
   </head>
   <body>
-    <!-- Header -->
-    <header>
+    <!-- navbar -->
+    <nav class="navbar">
       <div class="container">
         <div class="logo">
           <a href="./index.html"> <img src="assets/imgs/logo.png" alt="" /></a>
         </div>
-        <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Account</a></li>
-          <li>
-            <a class="cart-icon" href="./cart.html"
-              >Cart <i class="fa-solid fa-cart-shopping"></i
-            ></a>
-            <span class="cart-count"></span>
-          </li>
-        </ul>
+        <div class="navbar__dropdown-menu">
+          <div class="search">
+            <input type="search" placeholder="Search Books" />
+            <button class="search-btn">Search</button>
+          </div>
+          <ul class="navbar__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="">About</a></li>
+            <li>
+              <a class="cart-icon" href="./cart.html"
+                ><span>Cart</span><i class="fa-solid fa-cart-shopping"></i
+              ></a>
+              <span class="cart-count"></span>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar__dropdown__icon"><span></span></div>
       </div>
-    </header>
-    <!-- Book Item Section -->
+    </nav>
+    <!-- book item section -->
     <div class="book-item">
       <div class="container">
         <div class="img-container">
@@ -49,14 +58,14 @@
         </div>
       </div>
     </div>
-    <!-- Description Section -->
+    <!-- description section -->
     <div class="description">
       <div class="container">
         <h3>Description</h3>
         <p></p>
       </div>
     </div>
-    <!-- Footer -->
+    <!-- footer -->
     <footer>
       <div class="container">
         <div class="footer-section">
@@ -66,10 +75,7 @@
             extensive library of books in digital format for free on the
             Internet.
           </p>
-          <p class="copyright">
-            Copyright &copy;2023 All rights reserved I This templete is made
-            with <i class="fa-regular fa-heart"></i> by <span>Colorlib</span>
-          </p>
+          <p class="copyright">Copyright &copy;2023 All rights reserved.</p>
         </div>
         <div class="footer-section">
           <h4>Newsletter</h4>
@@ -89,13 +95,18 @@
           <div class="social">
             <i class="fa-brands fa-facebook-f"></i>
             <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-dribbble"></i>
-            <i class="fa-brands fa-behance"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
           </div>
         </div>
       </div>
     </footer>
+    <!-- scripts -->
+    <!-- Font Awesome Library -->
     <script src="assets/js/all.min.js"></script>
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <!-- Page JS File -->
     <script type="module" src="assets/js/book.js"></script>
   </body>
 </html>

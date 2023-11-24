@@ -1,22 +1,15 @@
-:root {
-  --blue: #54adec;
-  --blue-hover: #62bdfc;
-  --dark-grey: rgb(49, 49, 49);
-  --half-grey: rgba(0, 0, 0, 0.5);
-  --light-grey: rgb(209, 209, 209);
-
-  --section-padding: 80px 0;
-}
+/* book item section */
 .book-item {
-  padding: 50px 0;
+  padding: var(--section-padding);
 }
 .book-item .container {
   display: flex;
+  gap: 50px;
 }
 .book-item .img-container {
-  margin-right: 50px;
+  width: 30%;
   min-width: 180px;
-  height: 250px;
+  margin: auto;
 }
 img {
   width: 100%;
@@ -48,7 +41,7 @@ img {
   font-weight: 600;
 }
 .cart-btn {
-  width: 300px;
+  max-width: 300px;
   margin-bottom: 10px;
   padding: 10px;
   background-color: var(--dark-grey);
@@ -58,10 +51,10 @@ img {
 .cart-btn a {
   color: white;
 }
+/* description section */
 .description .container {
   position: relative;
-  padding-top: 30px;
-  padding-bottom: 60px;
+  padding: var(--section-padding);
 }
 .description .container::before {
   content: "";
@@ -79,4 +72,12 @@ img {
 }
 .description p {
   line-height: 1.5;
+}
+@media (max-width: 576px) {
+  .book-item .container {
+    flex-direction: column-reverse;
+  }
+  .book-item .container button {
+    max-width: 100%;
+  }
 }
