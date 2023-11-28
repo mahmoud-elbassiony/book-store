@@ -26,6 +26,8 @@ On the cart page the user can increase and decrease the count and can also remov
 
 Technologies: HTML, CSS, JavaScript
 
+Demo Link: https://book-store-95.vercel.app/
+
 Contact:
 Email: mahmoud.elbassiouny95@gmail.com
 LinkedIn: https://www.linkedin.com/in/mahmoud-elbassiouny/
